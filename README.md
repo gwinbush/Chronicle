@@ -1,5 +1,5 @@
 # Project Overview  
-Link to website: http://chronicle-webapp.s3-website-us-east-1.amazonaws.com/campaignAdd
+Link to website: http://chronicle-webapp.s3-website-us-east-1.amazonaws.com
 
 ## Requirements  
 A/B Testing Platform  
