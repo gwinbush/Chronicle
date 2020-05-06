@@ -26,7 +26,8 @@ Send two messages to two groups of customers. See how many customers open each m
 
 ## API
 ----
-
+#### Description
+Get the list of metrics (emails sent and opened) associated with a campaign id. 
 #### URL  
   `/api/v1/metrics`
 #### Method  
@@ -36,7 +37,9 @@ Send two messages to two groups of customers. See how many customers open each m
 #### Sample Call
     curl --location --request GET 'https://drtk2lbaij.execute-api.us-east-1.amazonaws.com/api/v1/metrics?campaign_id=223090a049644f8a8c82b09c33be6594'
 
-
+---
+#### Description
+Get the list of campaigns (A/B tests).
 #### URL  
   `/api/v1/campaigns/list`
 #### Method  
@@ -44,6 +47,9 @@ Send two messages to two groups of customers. See how many customers open each m
 #### Sample Call
     curl --location --request GET 'https://drtk2lbaij.execute-api.us-east-1.amazonaws.com/api/v1/campaigns/list'
 
+---
+#### Description
+Get the list of features and feature values associated with a group of users.
 #### URL  
   `/api/v1/features`
 #### Method  
@@ -53,8 +59,11 @@ Send two messages to two groups of customers. See how many customers open each m
 #### Sample Call
     curl --location --request GET https://drtk2lbaij.execute-api.us-east-1.amazonaws.com/api/v1/features?user_group=group_0
 
+---
+#### Description
+Create a new campaign (A/B test)
 #### URL  
-  `/api/v1/features`
+  `/api/v1/campaign`
 #### Method  
   `GET`
 #### Data Params
