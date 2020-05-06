@@ -2,10 +2,10 @@
 <v-app>
     <div>
         <Navbar/>
-        <h1 style='padding-top:20px; padding-bottom:20px; text-align:center'>Create a new A/B Test</h1>
     </div>
     <v-content>
-        <div class="column" style='background-color:#cbf1f5'>
+        <div class="column" style='background-color:#F5F5F5'>
+            <h1 style='padding-top:20px; padding-bottom:20px; text-align:center'>Create a new A/B Test</h1>
             <form>
                 <v-text-field
                     v-model="subject1"
@@ -27,8 +27,8 @@
                 ></v-textarea>
             </form>
         </div>
-        <div class="column" style='background-color:#ffaaa6'>
-            <form>
+        <div class="column" style='background-color:#E3E3E3'>
+            <form style="padding-top:87px">
                 <v-text-field
                     v-model="subject2"
                     :error-messages="nameErrors"
@@ -122,14 +122,7 @@ export default {
             message1: "",
             subject2:"",
             message2:"",
-            cohorts: {
-                "age": [ 21, 22, 23 ],
-                "city": [
-                    "Pittsburgh",
-                    "Ithaca",
-                    "McLean"
-                ]
-            },
+            cohorts: {},
             selected_cohort:"",
             selected_cohort_values:[],
             selected_value:"",
@@ -138,7 +131,11 @@ export default {
         }
     },
     mounted() {
-
+        axios({ method: "GET", "url": "https://drtk2lbaij.execute-api.us-east-1.amazonaws.com/api/v1/features?user_group=group_0" }).then(result => {
+                this.cohorts = result.data;
+            }, error => {
+                console.error(error);
+            });
     },
     methods: {
 
