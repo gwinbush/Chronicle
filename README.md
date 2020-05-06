@@ -24,6 +24,11 @@ Send two messages to two groups of customers. See how many customers open each m
 - User data (user id, campaign ids) stored in DynamoDB
 - Customer data (customer id, metadata) stored in DynamoDB and used to update segments on AWS Pinpoint when user submits new campaign with selected cohort
 
+#### Overview  
+There is a dataset containing customer email addresses and metadata which is updated and managed by the AWS Pinpoint service. When a user submits an A/B test through the Chronicle UI, the filters that they choose are applied to the customer dataset on Pinpoint. For instance, if a user selects "Age" as the feature to filter by and "21" as the value, only 21 year old customers will be included in the A/B test. The two messages the user specifies get sent out to the two halves of customers set specified by the filtered dataset.  
+
+When an A/B test is created, a test ID is displayed to the user. The user can use this test ID to look up metrics about the A/B test. They can see how many emails were sent out and how many emails were opened.
+
 ## API
 ----
 #### Description
