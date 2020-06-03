@@ -1,3 +1,5 @@
+# The website for this project is no longer available. The AWS infrastructure has been removed to stop incurring costs.
+
 # Project Overview  
 Link to website: http://chronicle-webapp.s3-website-us-east-1.amazonaws.com
 
